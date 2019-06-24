@@ -1,0 +1,70 @@
+/* =================================== */
+/*  Price Styles 
+/* =================================== */
+
+.price-section{
+    .price-left{
+        h4{
+            font-size: 35px;
+        }
+        p{
+            color:$black;
+            padding:10px 0px;
+        }
+    }
+    .single-price{
+        max-width: 300px;
+        margin:0 auto;
+        overflow: hidden;
+        border:1px solid rgb(140, 141, 158);
+        padding:30px;
+        background:$white;
+        z-index: 1;
+        @include transition();
+        i{
+            position: relative;
+            font-size: 40px;
+            color:$primary-color;
+        }
+        h4{
+            position: relative;
+            margin:10px 0;
+        }
+        .bottom-wrap{
+            border-top:1px solid rgb(140, 141, 158);
+            margin-top:20px;
+            padding-top:20px;
+            i{
+                font-size: 10px;
+            }          
+            ul li{
+                margin-bottom: 10px;
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        .overlay-bg{
+            @extend .gradient-bg;
+            opacity: 0;
+            @include transition();
+        }
+        &:hover{
+            color:$white;
+            -webkit-box-shadow: 0 7px 20px -10px rgba(171, 171, 171, 0.7);
+            -moz-box-shadow: 0 7px 20px -10px rgba(171, 171, 171, 0.7);
+            box-shadow: 0 7px 20px -10px rgba(171, 171, 171, 0.7);
+            transform: scale(1.1);            
+            i,h4,h2{
+                color:$white!important;
+            }
+            border-color:$white!important;
+            .bottom-wrap{
+                border-color:$white!important;
+            }
+            .overlay-bg{
+                opacity: 1;
+            }
+        }
+    }
+}
